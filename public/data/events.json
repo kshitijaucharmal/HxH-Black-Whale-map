@@ -7,7 +7,7 @@
     "characterId": "cashew",
     "anchorId": "a-t3-cabin",
     "sourceRef": "sample",
-    "note": "In their standard cabin."
+    "note": "PR flow smoke test — safe to close/merge."
   },
   {
     "id": "e-380-illumi",
