@@ -1,0 +1,19 @@
+[
+  { "id": "cashew", "name": "Cashew", "factionId": "kakin" },
+  { "id": "illumi", "name": "Illumi Zoldyck", "aliases": ["disguised guard"], "factionId": "zoldyck" },
+  { "id": "kalluto", "name": "Kalluto Zoldyck", "factionId": "phantom-troupe" },
+  { "id": "mizaistom", "name": "Mizaistom", "factionId": "zodiacs" },
+  { "id": "botobai", "name": "Botobai", "factionId": "zodiacs" },
+  { "id": "ginta", "name": "Ginta", "factionId": "zodiacs" },
+  { "id": "cheadle", "name": "Cheadle", "factionId": "zodiacs" },
+  { "id": "leorio", "name": "Leorio", "factionId": "hunter" },
+  { "id": "luini", "name": "Luini", "factionId": "heil-ly" },
+  { "id": "hinrigh", "name": "Hinrigh", "factionId": "xi-yu" },
+  { "id": "chrollo", "name": "Chrollo Lucilfer", "factionId": "phantom-troupe" },
+  { "id": "shizuku", "name": "Shizuku", "factionId": "phantom-troupe" },
+  { "id": "feitan", "name": "Feitan", "factionId": "phantom-troupe" },
+  { "id": "machi", "name": "Machi", "factionId": "phantom-troupe" },
+  { "id": "franklin", "name": "Franklin", "factionId": "phantom-troupe" },
+  { "id": "nobunaga", "name": "Nobunaga", "factionId": "phantom-troupe" },
+  { "id": "phinks", "name": "Phinks", "factionId": "phantom-troupe" }
+]

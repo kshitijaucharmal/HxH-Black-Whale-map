@@ -1,0 +1,46 @@
+[
+  { "id": "e-380-cashew", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "cashew", "anchorId": "a-t3-cabin", "sourceRef": "sample", "note": "In their standard cabin." },
+  { "id": "e-380-illumi", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "illumi", "anchorId": "a-t3-obs", "hidden": true, "sourceRef": "sample", "note": "Watching the observation deck under disguise." },
+  { "id": "e-380-kalluto", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "kalluto", "anchorId": "a-t3-obs", "calloutSide": "left", "sourceRef": "sample" },
+  { "id": "e-380-mizaistom", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "mizaistom", "anchorId": "a-t3-political", "sourceRef": "sample" },
+  { "id": "e-380-botobai", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "botobai", "anchorId": "a-t3-political", "calloutSide": "right", "sourceRef": "sample" },
+  { "id": "e-380-ginta", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "ginta", "anchorId": "a-t3-political", "sourceRef": "sample" },
+  { "id": "e-380-cheadle", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "cheadle", "anchorId": "a-medical", "sourceRef": "sample" },
+  { "id": "e-380-leorio", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "leorio", "anchorId": "a-medical", "calloutSide": "right", "sourceRef": "sample" },
+  { "id": "e-380-luini", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "luini", "anchorId": "a-heilly", "sourceRef": "sample" },
+  { "id": "e-380-hinrigh", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "hinrigh", "anchorId": "a-xiyu", "calloutSide": "left", "sourceRef": "sample" },
+  { "id": "e-380-chrollo", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "chrollo", "anchorId": "a-central-passage", "sourceRef": "sample", "note": "Moving through the central passage between tiers." },
+  { "id": "e-380-shizuku", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "shizuku", "anchorId": "a-central-passage", "sourceRef": "sample" },
+  { "id": "e-380-feitan", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "feitan", "anchorId": "a-warehouse", "sourceRef": "sample" },
+  { "id": "e-380-machi", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "machi", "anchorId": "a-t5-cabin", "calloutSide": "left", "sourceRef": "sample" },
+  { "id": "e-380-franklin", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "franklin", "anchorId": "a-t5-dining", "sourceRef": "sample" },
+  { "id": "e-380-nobunaga", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "nobunaga", "anchorId": "a-char", "sourceRef": "sample" },
+  { "id": "e-380-phinks", "chapter": 380, "storyDay": 4, "storyTime": "10:00", "characterId": "phinks", "anchorId": "a-char", "calloutSide": "right", "sourceRef": "sample" },
+
+  { "id": "e-349-chrollo", "chapter": 349, "storyDay": 1, "storyTime": "18:00", "characterId": "chrollo", "anchorId": "a-t5-dining", "sourceRef": "sample", "note": "Boarding day — down among the commoners in Tier 5." },
+  { "id": "e-349-machi", "chapter": 349, "storyDay": 1, "storyTime": "18:00", "characterId": "machi", "anchorId": "a-t5-cabin", "calloutSide": "left", "sourceRef": "sample" },
+  { "id": "e-349-illumi", "chapter": 349, "storyDay": 1, "storyTime": "18:00", "characterId": "illumi", "anchorId": "a-central-passage", "sourceRef": "sample", "note": "Boarding, not yet in position." },
+  { "id": "e-349-leorio", "chapter": 349, "storyDay": 1, "storyTime": "18:00", "characterId": "leorio", "anchorId": "a-medical", "calloutSide": "right", "sourceRef": "sample" },
+
+  { "id": "e-400-chrollo", "chapter": 400, "storyDay": 6, "storyTime": "22:00", "characterId": "chrollo", "anchorId": "a-warehouse", "sourceRef": "sample", "note": "Relocated toward the warehouse." },
+  { "id": "e-400-illumi", "chapter": 400, "storyDay": 6, "storyTime": "22:00", "characterId": "illumi", "anchorId": "a-medical", "hidden": true, "sourceRef": "sample" },
+  { "id": "e-400-feitan", "chapter": 400, "storyDay": 6, "storyTime": "22:00", "characterId": "feitan", "anchorId": "a-central-passage", "sourceRef": "sample" },
+
+  { "id": "e-360-chrollo", "chapter": 360, "storyDay": 2, "storyTime": "09:00", "characterId": "chrollo", "anchorId": "a-t5-cabin", "sourceRef": "sample" },
+  { "id": "e-360-hinrigh", "chapter": 360, "storyDay": 2, "storyTime": "09:00", "characterId": "hinrigh", "anchorId": "a-xiyu", "calloutSide": "left", "sourceRef": "sample" },
+  { "id": "e-360-kalluto", "chapter": 360, "storyDay": 2, "storyTime": "09:00", "characterId": "kalluto", "anchorId": "a-t3-obs", "calloutSide": "left", "sourceRef": "sample" },
+
+  { "id": "e-370-illumi", "chapter": 370, "storyDay": 3, "storyTime": "14:00", "characterId": "illumi", "anchorId": "a-t3-obs", "hidden": true, "sourceRef": "sample" },
+  { "id": "e-370-chrollo", "chapter": 370, "storyDay": 3, "storyTime": "14:00", "characterId": "chrollo", "anchorId": "a-central-passage", "sourceRef": "sample" },
+
+  { "id": "e-390-feitan", "chapter": 390, "storyDay": 5, "storyTime": "16:00", "characterId": "feitan", "anchorId": "a-warehouse", "sourceRef": "sample" },
+  { "id": "e-390-chrollo", "chapter": 390, "storyDay": 5, "storyTime": "16:00", "characterId": "chrollo", "anchorId": "a-central-passage", "sourceRef": "sample" },
+  { "id": "e-390-machi", "chapter": 390, "storyDay": 5, "storyTime": "16:00", "characterId": "machi", "anchorId": "a-t5-cabin", "calloutSide": "left", "sourceRef": "sample" },
+
+  { "id": "e-410-chrollo", "chapter": 410, "storyDay": 7, "storyTime": "08:00", "characterId": "chrollo", "anchorId": "a-heilly", "sourceRef": "sample" },
+  { "id": "e-410-nobunaga", "chapter": 410, "storyDay": 7, "storyTime": "08:00", "characterId": "nobunaga", "anchorId": "a-char", "sourceRef": "sample" },
+  { "id": "e-410-phinks", "chapter": 410, "storyDay": 7, "storyTime": "08:00", "characterId": "phinks", "anchorId": "a-char", "calloutSide": "right", "sourceRef": "sample" },
+
+  { "id": "e-415-chrollo", "chapter": 415, "storyDay": 7, "storyTime": "20:00", "characterId": "chrollo", "anchorId": "a-t3-political", "sourceRef": "sample", "note": "Latest known position (sample)." },
+  { "id": "e-415-feitan", "chapter": 415, "storyDay": 7, "storyTime": "20:00", "characterId": "feitan", "anchorId": "a-warehouse", "sourceRef": "sample" }
+]

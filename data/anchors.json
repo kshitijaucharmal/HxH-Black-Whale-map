@@ -1,0 +1,13 @@
+[
+  { "id": "a-t3-obs", "label": "Tier 3 Observation Deck", "tier": 3, "x": 0.16, "y": 0.45 },
+  { "id": "a-t3-cabin", "label": "Tier 3 Standard Cabin", "tier": 3, "x": 0.40, "y": 0.45 },
+  { "id": "a-t3-political", "label": "Tier 3 Political Ward", "tier": 3, "x": 0.62, "y": 0.45 },
+  { "id": "a-medical", "label": "Medical Ward", "tier": 3, "x": 0.82, "y": 0.45 },
+  { "id": "a-xiyu", "label": "Xi-Yu Family Office", "tier": 4, "x": 0.14, "y": 0.63 },
+  { "id": "a-central-passage", "label": "Central Passage (Tiers 4-5)", "tier": 4, "x": 0.46, "y": 0.63 },
+  { "id": "a-heilly", "label": "Heil-Ly Family Office", "tier": 4, "x": 0.78, "y": 0.63 },
+  { "id": "a-t5-cabin", "label": "Tier 5 Standard Cabin", "tier": 5, "x": 0.24, "y": 0.84 },
+  { "id": "a-warehouse", "label": "Warehouse Entrance", "tier": 5, "x": 0.44, "y": 0.84 },
+  { "id": "a-t5-dining", "label": "Tier 5 Central Dining Hall", "tier": 5, "x": 0.58, "y": 0.84 },
+  { "id": "a-char", "label": "Cha-R Family Office", "tier": 5, "x": 0.76, "y": 0.84 }
+]
