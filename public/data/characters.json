@@ -1,0 +1,169 @@
+[
+  {
+    "id": "cashew",
+    "name": "Cashew",
+    "factionId": "kakin",
+    "species": "Human",
+    "affiliation": "Kakin Empire",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Cashew"
+  },
+  {
+    "id": "illumi",
+    "name": "Illumi Zoldyck",
+    "aliases": ["disguised guard"],
+    "factionId": "zoldyck",
+    "species": "Human",
+    "nenType": "Manipulator",
+    "affiliation": "Zoldyck Family; Phantom Troupe (temp. #11)",
+    "status": "alive",
+    "bio": "Eldest Zoldyck sibling and a top-tier assassin, hired onto the ship. A master of disguise and needle-based Manipulation.",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Illumi_Zoldyck"
+  },
+  {
+    "id": "kalluto",
+    "name": "Kalluto Zoldyck",
+    "factionId": "phantom-troupe",
+    "species": "Human",
+    "nenType": "Manipulator",
+    "affiliation": "Phantom Troupe (#4); Zoldyck Family",
+    "status": "alive",
+    "bio": "Youngest Zoldyck child, who joined the Phantom Troupe to search for their brother Killua.",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Kalluto_Zoldyck"
+  },
+  {
+    "id": "mizaistom",
+    "name": "Mizaistom Nana",
+    "factionId": "zodiacs",
+    "species": "Human",
+    "affiliation": "Hunter Association (Zodiac — 'Ox')",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Mizaistom_Nana"
+  },
+  {
+    "id": "botobai",
+    "name": "Botobai Gigante",
+    "factionId": "zodiacs",
+    "species": "Human",
+    "affiliation": "Hunter Association (Zodiac — 'Dragon')",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Botobai_Gigante"
+  },
+  {
+    "id": "ginta",
+    "name": "Ginta",
+    "factionId": "zodiacs",
+    "species": "Human",
+    "affiliation": "Hunter Association (Zodiac — 'Boar')",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Ginta"
+  },
+  {
+    "id": "cheadle",
+    "name": "Cheadle Yorkshire",
+    "factionId": "zodiacs",
+    "species": "Human",
+    "affiliation": "Hunter Association Chairman (Zodiac — 'Dog')",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Cheadle_Yorkshire"
+  },
+  {
+    "id": "leorio",
+    "name": "Leorio Paradinight",
+    "factionId": "hunter",
+    "species": "Human",
+    "affiliation": "Hunter Association",
+    "status": "alive",
+    "bio": "Rookie Hunter and aspiring doctor, one of Gon's closest friends.",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Leorio_Paradinight"
+  },
+  {
+    "id": "luini",
+    "name": "Luini",
+    "factionId": "heil-ly",
+    "species": "Human",
+    "affiliation": "Heil-Ly Family",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Luini"
+  },
+  {
+    "id": "hinrigh",
+    "name": "Hinrigh Bigcarson",
+    "factionId": "xi-yu",
+    "species": "Human",
+    "affiliation": "Xi-Yu Family",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Hinrigh_Bigcarson"
+  },
+  {
+    "id": "chrollo",
+    "name": "Chrollo Lucilfer",
+    "factionId": "phantom-troupe",
+    "species": "Human",
+    "nenType": "Specialist",
+    "affiliation": "Phantom Troupe (Leader, #0)",
+    "status": "alive",
+    "bio": "Founder and leader of the Phantom Troupe. His ability Skill Hunter steals the Nen abilities of others into his book, Bandit's Secret.",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Chrollo_Lucilfer"
+  },
+  {
+    "id": "shizuku",
+    "name": "Shizuku Murasaki",
+    "factionId": "phantom-troupe",
+    "species": "Human",
+    "nenType": "Conjurer",
+    "affiliation": "Phantom Troupe (#8)",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Shizuku_Murasaki"
+  },
+  {
+    "id": "feitan",
+    "name": "Feitan Portor",
+    "factionId": "phantom-troupe",
+    "species": "Human",
+    "nenType": "Transmuter",
+    "affiliation": "Phantom Troupe (#2)",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Feitan_Portor"
+  },
+  {
+    "id": "machi",
+    "name": "Machi Komacine",
+    "factionId": "phantom-troupe",
+    "species": "Human",
+    "nenType": "Transmuter",
+    "affiliation": "Phantom Troupe (#3)",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Machi_Komacine"
+  },
+  {
+    "id": "franklin",
+    "name": "Franklin Bordeau",
+    "factionId": "phantom-troupe",
+    "species": "Human",
+    "nenType": "Emitter",
+    "affiliation": "Phantom Troupe (#7)",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Franklin_Bordeau"
+  },
+  {
+    "id": "nobunaga",
+    "name": "Nobunaga Hazama",
+    "factionId": "phantom-troupe",
+    "species": "Human",
+    "nenType": "Enhancer",
+    "affiliation": "Phantom Troupe (#1)",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Nobunaga_Hazama"
+  },
+  {
+    "id": "phinks",
+    "name": "Phinks Magcub",
+    "factionId": "phantom-troupe",
+    "species": "Human",
+    "nenType": "Enhancer",
+    "affiliation": "Phantom Troupe (#5)",
+    "status": "alive",
+    "wikiUrl": "https://hunterxhunter.fandom.com/wiki/Phinks_Magcub"
+  }
+]

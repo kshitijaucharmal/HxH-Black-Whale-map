@@ -8,6 +8,8 @@ export interface Faction {
   color: string
 }
 
+export type LifeStatus = 'alive' | 'deceased' | 'unknown'
+
 export interface Character {
   id: string
   name: string
@@ -15,6 +17,13 @@ export interface Character {
   factionId: string
   /** Path to a cropped face PNG under /public/faces. Optional — falls back to initials. */
   defaultFace?: string
+  species?: string
+  nenType?: string
+  affiliation?: string
+  status?: LifeStatus
+  bio?: string
+  /** Link to the character's page on the HxH fandom wiki. */
+  wikiUrl?: string
   notes?: string
 }
 

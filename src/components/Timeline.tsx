@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
-import { dataset, effectiveTiming } from '../lib/data'
+import { effectiveTiming } from '../lib/data'
 import { useStore } from '../store'
 
 export default function Timeline() {
-  const { chapters } = dataset
+  const chapters = useStore((s) => s.data.chapters)
+  const data = useStore((s) => s.data)
   const last = chapters.length - 1
   const chapterIndex = useStore((s) => s.chapterIndex)
   const setChapterIndex = useStore((s) => s.setChapterIndex)
@@ -12,7 +13,7 @@ export default function Timeline() {
   const timelineMode = useStore((s) => s.timelineMode)
 
   const current = chapters[chapterIndex]
-  const timing = effectiveTiming(chapterIndex)
+  const timing = effectiveTiming(data, chapterIndex)
   const pct = last > 0 ? (chapterIndex / last) * 100 : 0
 
   // Auto-advance while playing; stop at the end.
