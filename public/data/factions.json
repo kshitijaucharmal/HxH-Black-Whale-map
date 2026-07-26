@@ -1,10 +1,42 @@
 [
-  { "id": "zodiacs", "name": "Hunter Association (Zodiacs)", "color": "#4aa3ff" },
-  { "id": "hunter", "name": "Hunter Association", "color": "#5cc8d8" },
-  { "id": "phantom-troupe", "name": "Phantom Troupe", "color": "#c0392b" },
-  { "id": "zoldyck", "name": "Zoldyck Family", "color": "#8e44ad" },
-  { "id": "heil-ly", "name": "Heil-Ly Family", "color": "#e67e22" },
-  { "id": "xi-yu", "name": "Xi-Yu Family", "color": "#27ae60" },
-  { "id": "cha-r", "name": "Cha-R Family", "color": "#d4b106" },
-  { "id": "kakin", "name": "Kakin Empire", "color": "#95a5a6" }
+  {
+    "id": "zodiacs",
+    "name": "Hunter Association (Zodiacs)",
+    "color": "#4aa3ff"
+  },
+  {
+    "id": "hunter",
+    "name": "Hunter Association",
+    "color": "#5cc8d8"
+  },
+  {
+    "id": "phantom-troupe",
+    "name": "Phantom Troupe",
+    "color": "#c0392b"
+  },
+  {
+    "id": "zoldyck",
+    "name": "Zoldyck Family",
+    "color": "#8e44ad"
+  },
+  {
+    "id": "heil-ly",
+    "name": "Heil-Ly Family",
+    "color": "#e67e22"
+  },
+  {
+    "id": "xi-yu",
+    "name": "Xi-Yu Family",
+    "color": "#27ae60"
+  },
+  {
+    "id": "cha-r",
+    "name": "Cha-R Family",
+    "color": "#d4b106"
+  },
+  {
+    "id": "kakin",
+    "name": "Kakin Empire",
+    "color": "#95a5a6"
+  }
 ]
