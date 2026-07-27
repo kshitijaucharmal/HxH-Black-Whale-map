@@ -31,8 +31,11 @@ interface AppState {
   setPlaying: (p: boolean) => void
 
   // Selection / filters ---------------------------------------------------
+  // The inspector's subject is either a placement (event) or a bare character.
   selectedEventId: string | null
   setSelectedEventId: (id: string | null) => void
+  selectedCharacterId: string | null
+  setSelectedCharacterId: (id: string | null) => void
   hiddenFactions: Set<string>
   toggleFaction: (id: string) => void
   hiddenTiers: Set<number>
@@ -43,14 +46,14 @@ interface AppState {
   // Editor ----------------------------------------------------------------
   editing: boolean
   setEditing: (e: boolean) => void
-  editingCharacterId: string | null | 'new'
-  openCharacterEditor: (id: string | null | 'new') => void
   addAnchorMode: boolean
   setAddAnchorMode: (v: boolean) => void
 
-  upsertCharacter: (c: Character) => void
+  createCharacter: () => string
+  updateCharacter: (id: string, patch: Partial<Character>) => void
+  deleteCharacter: (id: string) => void
   addAnchor: (label: string, tier: number, x: number, y: number) => Anchor
-  addEvent: (e: Omit<GameEvent, 'id'>) => void
+  addEvent: (e: Omit<GameEvent, 'id'>) => string
   updateEvent: (id: string, patch: Partial<GameEvent>) => void
   deleteEvent: (id: string) => void
 }
@@ -61,7 +64,14 @@ export const useStore = create<AppState>((set) => ({
   dirty: false,
   loadData: async () => {
     const data = await fetchDataset()
-    set({ data, loaded: true, dirty: false, chapterIndex: Math.max(0, data.chapters.length - 1) })
+    set({
+      data,
+      loaded: true,
+      dirty: false,
+      chapterIndex: Math.max(0, data.chapters.length - 1),
+      selectedEventId: null,
+      selectedCharacterId: null,
+    })
   },
   markSaved: () => set({ dirty: false }),
 
@@ -75,7 +85,9 @@ export const useStore = create<AppState>((set) => ({
   setPlaying: (p) => set({ playing: p }),
 
   selectedEventId: null,
-  setSelectedEventId: (id) => set({ selectedEventId: id }),
+  setSelectedEventId: (id) => set({ selectedEventId: id, selectedCharacterId: null }),
+  selectedCharacterId: null,
+  setSelectedCharacterId: (id) => set({ selectedCharacterId: id, selectedEventId: null }),
   hiddenFactions: new Set<string>(),
   toggleFaction: (id) =>
     set((s) => {
@@ -95,19 +107,40 @@ export const useStore = create<AppState>((set) => ({
 
   editing: false,
   setEditing: (e) => set({ editing: e, addAnchorMode: false }),
-  editingCharacterId: null,
-  openCharacterEditor: (id) => set({ editingCharacterId: id }),
   addAnchorMode: false,
   setAddAnchorMode: (v) => set({ addAnchorMode: v }),
 
-  upsertCharacter: (c) =>
-    set((s) => {
-      const exists = s.data.characters.some((x) => x.id === c.id)
-      const characters = exists
-        ? s.data.characters.map((x) => (x.id === c.id ? c : x))
-        : [...s.data.characters, c]
-      return { data: { ...s.data, characters }, dirty: true }
-    }),
+  createCharacter: () => {
+    const id = uid('char')
+    const character: Character = { id, name: 'New character', factionId: '', species: 'Human', status: 'alive' }
+    set((s) => ({
+      data: { ...s.data, characters: [...s.data.characters, character] },
+      dirty: true,
+      selectedCharacterId: id,
+      selectedEventId: null,
+    }))
+    return id
+  },
+
+  updateCharacter: (id, patch) =>
+    set((s) => ({
+      data: {
+        ...s.data,
+        characters: s.data.characters.map((c) => (c.id === id ? { ...c, ...patch } : c)),
+      },
+      dirty: true,
+    })),
+
+  deleteCharacter: (id) =>
+    set((s) => ({
+      data: {
+        ...s.data,
+        characters: s.data.characters.filter((c) => c.id !== id),
+        events: s.data.events.filter((e) => e.characterId !== id),
+      },
+      dirty: true,
+      selectedCharacterId: null,
+    })),
 
   addAnchor: (label, tier, x, y) => {
     const anchor: Anchor = { id: uid('a'), label, tier, x, y }
@@ -115,18 +148,15 @@ export const useStore = create<AppState>((set) => ({
     return anchor
   },
 
-  addEvent: (e) =>
-    set((s) => ({
-      data: { ...s.data, events: [...s.data.events, { ...e, id: uid('e') }] },
-      dirty: true,
-    })),
+  addEvent: (e) => {
+    const id = uid('e')
+    set((s) => ({ data: { ...s.data, events: [...s.data.events, { ...e, id }] }, dirty: true }))
+    return id
+  },
 
   updateEvent: (id, patch) =>
     set((s) => ({
-      data: {
-        ...s.data,
-        events: s.data.events.map((e) => (e.id === id ? { ...e, ...patch } : e)),
-      },
+      data: { ...s.data, events: s.data.events.map((e) => (e.id === id ? { ...e, ...patch } : e)) },
       dirty: true,
     })),
 
@@ -134,11 +164,6 @@ export const useStore = create<AppState>((set) => ({
     set((s) => ({
       data: { ...s.data, events: s.data.events.filter((e) => e.id !== id) },
       dirty: true,
+      selectedEventId: null,
     })),
 }))
-
-// Convenience selector for the current chapter number.
-export const currentChapterNumber = () => {
-  const s = useStore.getState()
-  return s.data.chapters[s.chapterIndex]?.number
-}

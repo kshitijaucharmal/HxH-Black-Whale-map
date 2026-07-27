@@ -63,7 +63,26 @@ function editorApi(): Plugin {
     configureServer(server) {
       const root = server.config.root
 
+      const IMG_TYPES: Record<string, string> = {
+        png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg',
+        gif: 'image/gif', webp: 'image/webp', svg: 'image/svg+xml',
+      }
+
       server.middlewares.use(async (req, res, next) => {
+        // Serve uploaded face images ourselves (Vite's public serving doesn't
+        // reliably pick up files created during the session).
+        if (req.method === 'GET' && req.url?.startsWith('/faces/')) {
+          const clean = decodeURIComponent(req.url.split('?')[0])
+          if (clean.includes('..')) return next()
+          const fp = path.join(root, 'public', clean)
+          if (!existsSync(fp)) return next()
+          const ext = path.extname(fp).slice(1).toLowerCase()
+          res.setHeader('Content-Type', IMG_TYPES[ext] ?? 'application/octet-stream')
+          res.setHeader('Cache-Control', 'no-cache')
+          res.end(await fs.readFile(fp))
+          return
+        }
+
         if (!req.url?.startsWith('/api/') || req.method !== 'POST') return next()
         try {
           // ---- upload a face image -------------------------------------

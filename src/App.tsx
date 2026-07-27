@@ -5,10 +5,9 @@ import { useStore } from './store'
 import MapCanvas from './components/MapCanvas'
 import Sidebar from './components/Sidebar'
 import Timeline from './components/Timeline'
-import DetailPanel from './components/DetailPanel'
+import Inspector from './components/Inspector'
 import Segmented from './components/Segmented'
-import EditorColumn from './components/editor/EditorColumn'
-import CharacterEditor from './components/editor/CharacterEditor'
+import { Whale, Pencil } from './components/icons'
 
 export default function App() {
   const loaded = useStore((s) => s.loaded)
@@ -23,7 +22,6 @@ export default function App() {
   const hiddenTiers = useStore((s) => s.hiddenTiers)
   const editing = useStore((s) => s.editing)
   const setEditing = useStore((s) => s.setEditing)
-  const editingCharacterId = useStore((s) => s.editingCharacterId)
 
   useEffect(() => {
     void loadData()
@@ -47,29 +45,21 @@ export default function App() {
   return (
     <div className="flex h-full flex-col">
       <header className="flex items-center gap-4 bg-[var(--ink)] px-5 py-2.5 text-white">
-        <div className="flex items-baseline gap-2.5">
-          <span className="text-[var(--accent)]">◆</span>
-          <span className="text-sm font-bold tracking-tight">Black Whale Tracker</span>
-          <span className="hidden text-xs text-gray-400 sm:inline">Hunter × Hunter · Succession Contest</span>
+        <div className="flex items-center gap-2.5">
+          <span className="text-[var(--accent)]"><Whale width={22} height={22} /></span>
+          <span className="wordmark text-[17px] font-bold">Black Whale</span>
+          <span className="hidden text-[11px] tracking-wide text-gray-400 uppercase sm:inline">Succession Contest Tracker</span>
         </div>
-        <div className="ml-auto flex items-center gap-2">
-          <Segmented
-            options={[['snapshot', 'This chapter'], ['cumulative', 'Last known']]}
-            value={viewMode}
-            onChange={setViewMode}
-          />
-          <Segmented
-            options={[['chapter', 'Chapter'], ['time', 'Day / time']]}
-            value={timelineMode}
-            onChange={setTimelineMode}
-          />
+        <div className="ml-auto flex items-center gap-2.5">
+          <Segmented options={[['snapshot', 'This chapter'], ['cumulative', 'Last known']]} value={viewMode} onChange={setViewMode} />
+          <Segmented options={[['chapter', 'Chapter'], ['time', 'Day / time']]} value={timelineMode} onChange={setTimelineMode} />
           <button
             onClick={() => setEditing(!editing)}
-            className={`rounded-md px-3 py-1.5 text-xs font-semibold transition-colors ${
-              editing ? 'bg-[var(--accent)] text-white' : 'border border-white/15 text-gray-200 hover:bg-white/10'
+            className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors ${
+              editing ? 'bg-[var(--accent)] text-white' : 'bg-white/10 text-gray-100 hover:bg-white/20'
             }`}
           >
-            {editing ? 'Done editing' : 'Edit'}
+            <Pencil width={14} height={14} /> {editing ? 'Editing' : 'Edit'}
           </button>
         </div>
       </header>
@@ -78,10 +68,8 @@ export default function App() {
         <Sidebar factionCounts={factionCounts} tierCounts={tierCounts} total={total} />
         <main className="relative min-h-0 flex-1 bg-[var(--canvas)]">
           <MapCanvas items={items} />
-          <DetailPanel />
-          {editingCharacterId && <CharacterEditor key={editingCharacterId} />}
         </main>
-        {editing && <EditorColumn />}
+        <Inspector />
       </div>
 
       <Timeline />

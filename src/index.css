@@ -1,12 +1,16 @@
 @import 'tailwindcss';
 
 :root {
-  --ink: #14161d;
+  --ink: #16181f;
+  --ink-2: #1f232c;
   --panel: #ffffff;
-  --canvas: #e9ebef;
-  --line: #e2e5eb;
-  --muted: #6b7280;
-  --accent: #c2410c; /* burnt orange, hitmaps-like */
+  --canvas: #e7e4dd; /* warm paper */
+  --line: #e5e2db;
+  --line-strong: #d8d4cb;
+  --muted: #8b8f98;
+  --text: #1c1f26;
+  --accent: #b4462f; /* terracotta */
+  --accent-ink: #97371f;
 }
 
 html,
@@ -18,63 +22,139 @@ body,
 
 body {
   background: var(--canvas);
-  color: var(--ink);
+  color: var(--text);
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
   -webkit-font-smoothing: antialiased;
 }
 
-/* Form input */
-.inp {
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-  background: #f6f7f9;
-  padding: 6px 10px;
-  font-size: 13px;
-  color: var(--ink);
-  outline: none;
-}
-.inp:focus {
-  border-color: var(--accent);
-  background: #fff;
+.wordmark {
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.01em;
 }
 
-/* Section label — small uppercase, hitmaps-style */
 .eyebrow {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
-/* Custom timeline range ------------------------------------------------- */
+.hairline {
+  border-color: var(--line);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+/* Form controls -------------------------------------------------------- */
+.inp {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: #fbfbfa;
+  padding: 7px 10px;
+  font-size: 13px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.12s, box-shadow 0.12s, background 0.12s;
+}
+.inp:hover {
+  border-color: #c7c2b8;
+}
+.inp:focus {
+  border-color: var(--accent);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(180, 70, 47, 0.12);
+}
+textarea.inp {
+  resize: none;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s, opacity 0.12s;
+  border: 1px solid transparent;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:not(:disabled):hover {
+  background: var(--accent-ink);
+}
+.btn-dark {
+  background: var(--ink);
+  color: #fff;
+}
+.btn-dark:not(:disabled):hover {
+  background: #000;
+}
+.btn-ghost {
+  border-color: var(--line-strong);
+  background: #fff;
+  color: #3a3f49;
+}
+.btn-ghost:not(:disabled):hover {
+  background: #f5f3ef;
+}
+
+/* Timeline range ------------------------------------------------------- */
 .scrubber {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 6px;
+  height: 4px;
   border-radius: 999px;
-  background: #d4d8df;
+  background: var(--line-strong);
   outline: none;
   cursor: pointer;
 }
 .scrubber::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 3px solid #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-  margin-top: -1px;
-}
-.scrubber::-moz-range-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: var(--accent);
-  border: 3px solid #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  background: #fff;
+  border: 4px solid var(--accent);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.scrubber::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid var(--accent);
+}
+
+/* Scrollbars ----------------------------------------------------------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfcabf transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #d3cec3;
+  border-radius: 999px;
 }
